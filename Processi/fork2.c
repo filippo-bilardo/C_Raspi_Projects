@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Definizione delle variabili globali op1,op2 e ris
+// Definire i prototipi delle funzioni
 
-// Definiamo i prototipi delle funzioni
+// Definizione delle variabili globali op1,op2 e ris
 
 int main()
 {
@@ -18,11 +18,11 @@ int main()
   pid=fork();
   if (pid==0)
   {
-    childProcess();
+    // Richiamare la funzione childProcess();
   }
   else if (pid>0)
   {
-    fatherProcess(pid);
+    // Richiamare la funzione fatherProcess(pid);
   }
   else // pid<0
   {
@@ -39,7 +39,7 @@ int main()
 }
 
 
-int childProcess()
+// Definire la funzione childProcess();
 {
   // Visualizza il seguenti messaggi:
   // [Figlio] - pid=<getpid()>, pid del processo padre=<getppid()>
@@ -47,7 +47,7 @@ int childProcess()
   // [Figlio] - Il risultato della somma di op1+op2=<ris>
 }
 
-int fatherProcess(int childpid)
+// Definire la funzione fatherProcess(int childpid)
 {
   // Visualizza il seguenti messaggi:
   // [Padre] - pid=<getpid()>, pid del processo padre=<getppid()>, pid del processo figlio=<childpid>
